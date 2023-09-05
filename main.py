@@ -13,6 +13,7 @@ to_learn = {}
 # ______________________________Generating random French Words________________________________#
 try:
     data = pd.read_csv("words_to_learn.csv")
+
 except FileNotFoundError:
     original_data = pd.read_csv("french_words.csv")
     to_learn = original_data.to_dict(orient="records")
